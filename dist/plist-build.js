@@ -69,7 +69,7 @@ function build (obj, opts) {
     sysid: 'http://www.apple.com/DTDs/PropertyList-1.0.dtd'
   };
 
-  var doc = xmlbuilder.create('plist');
+  var doc = xmlbuilder.create('plist', {allowSurrogateChars:true});
 
   doc.dec(XMLHDR.version, XMLHDR.encoding, XMLHDR.standalone);
   doc.dtd(XMLDTD.pubid, XMLDTD.sysid);
